@@ -1,0 +1,61 @@
+{
+  "name": "react-modern-cursor",
+  "version": "1.0.0-rc.1",
+  "type": "commonjs",
+  "description": "An adaptive animated cursor for React with text, link, and interactive target variants.",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiankeller/react-modern-cursor.git"
+  },
+  "homepage": "https://github.com/caiankeller/react-modern-cursor",
+  "bugs": {
+    "url": "https://github.com/caiankeller/react-modern-cursor/issues"
+  },
+  "keywords": [
+    "react",
+    "cursor",
+    "custom-cursor",
+    "animation",
+    "nextjs"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "check": "npm run typecheck && npm run build",
+    "dev": "tsup --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run check",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  }
+}
